@@ -12,6 +12,7 @@ public class Enter extends AppCompatActivity {
     static String theWord;
     static EditText theword;
     static TextView feedback;
+    static int remainingChance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,11 +28,23 @@ public class Enter extends AppCompatActivity {
                 theWord = theword.getText().toString();
                 feedback = findViewById(R.id.wordfeedback);
                 if (theWord.length() != 0) {
+                    if (theWord.length() == 1 || theWord.length() == 2 || theWord.length() == 3 || theWord.length() == 4) {
+                        remainingChance = 2;
+                    } else if (theWord.length() == 5 || theWord.length() == 6) {
+                        remainingChance = 3;
+                    } else if (theWord.length() == 7 || theWord.length() == 8) {
+                        remainingChance = 4;
+                    } else if (theWord.length() == 9 || theWord.length() == 10) {
+                        remainingChance = 5;
+                    } else if (theWord.length() > 10 && theWord.length() <= 14) {
+                        remainingChance = 6;
+                    } else {
+                        remainingChance = 7;
+                    }
                     Intent intent = new Intent(v.getContext(), Guess.class);
                     startActivity(intent);
                 } else {
                     feedback.setText("Please enter a word that is at least one character long!!!");
-
                 }
             }
         });
