@@ -1,0 +1,14 @@
+<resources>
+    <string name="welcome">Welcome to Guess the Word!</string>
+    <string name="start">START game</string>
+    <string name="rule">Rule</string>
+    <string name="word">Please Enter the word Here:</string>
+    <string name="hint">Enter word here:</string>
+    <string name="proceed">continue</string>
+    <string name="guess">Please take a guess:</string>
+    <string name="ghint">Enter a character each time</string>
+    <string name="remaining">Remaining chances:</string>
+    <string name="menu">Menu</string>
+    <string name="rules">This game should be played by at least two people. At the beginning, one player is required to type in a word. Based on the length of that word, different number of chances will be given to the another player. During the game, the word setter can give any hints to the guesser if the word setter wants. If the second player can successfully guess which word it is with given chances, the guesser wins. Otherwise, the question setter wins. </string>
+    <string name="app_name">Final Project</string>
+</resources>
